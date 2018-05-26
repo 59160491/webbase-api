@@ -13,7 +13,10 @@ app.use(cors())
 
 /// TODO: Develop GET /contacts
  
-สวัสดีท็อป
+app.get("/contacts", (req, res) => {
+    res.json(contacts)
+})
+
 
 /// TODO: Develop POST /contacts
 
