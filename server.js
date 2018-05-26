@@ -17,9 +17,13 @@ app.get("/contacts", (req, res) => {
     res.json(contacts)
 })
 
+app.get("/contacts/:index", (req, res) => {
+    let index = req.params.index
+    json(contacts[index])
+})
 
 /// TODO: Develop POST /contacts
-ดีจ้ะ
+
 
 
 app.listen(3000, () => {
