@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 /// TODO: Develop GET /contacts
- 
+
 app.get("/contacts", (req, res) => {
     res.json(contacts)
 })
@@ -23,7 +23,11 @@ app.get("/contacts/:index", (req, res) => {
 })
 
 /// TODO: Develop POST /contacts
-
+app.post("/contacts", (req, res) => {
+    let newContact = req.body
+    contacts.push(newContact)
+    res.status(201).json(newContact)
+})
 
 
 app.listen(3000, () => {
